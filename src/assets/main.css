@@ -1,0 +1,4 @@
+@import '@logicflow/core/lib/style/index.css';
+@import '@logicflow/extension/lib/style/index.css';
+@import './base.css';
+@import 'vue-json-pretty/lib/styles.css';
