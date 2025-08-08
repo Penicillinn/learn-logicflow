@@ -27,7 +27,20 @@ const showJsonPretty = ref(true)
 watch(
   () => route.name,
   (value) => {
-    if (['background', 'theme', 'grid', 'menu', 'control', 'adapter', 'process'].includes(value)) {
+    if (
+      [
+        'background',
+        'theme',
+        'grid',
+        'menu',
+        'control',
+        'adapter',
+        'process',
+        'minimap',
+        'snapshot',
+        'plugins',
+      ].includes(value)
+    ) {
       showJsonPretty.value = false
     } else {
       showJsonPretty.value = true

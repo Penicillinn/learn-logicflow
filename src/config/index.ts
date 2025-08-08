@@ -633,4 +633,557 @@ export const configData = {
       },
     ],
   },
+  connectedSourceRules: {
+    nodes: [
+      {
+        id: '1',
+        type: 'custom-start',
+        x: 300,
+        y: 100,
+        text: '开始节点',
+        properties: {
+          name: 'testttt',
+        },
+      },
+      {
+        id: '2',
+        type: 'custom-end',
+        x: 300,
+        y: 250,
+        text: '结束节点',
+      },
+      {
+        id: '8',
+        type: 'rect',
+        x: 100,
+        y: 350,
+        text: 'rect',
+      },
+      {
+        id: '3',
+        type: 'custom-hexagon',
+        x: 100,
+        y: 100,
+        text: '只能连接到rect',
+      },
+    ],
+    edges: [],
+  },
+  moveRules: {
+    nodes: [
+      {
+        type: 'custom-move-group',
+        x: 300,
+        y: 250,
+        text: '你好',
+        children: ['circle-1'],
+      },
+      {
+        type: 'custom-movable-node',
+        x: 300,
+        y: 70,
+        text: '不允许移动到坐标为负值的地方',
+      },
+      {
+        id: 'circle-1',
+        type: 'circle',
+        x: 300,
+        y: 250,
+        text: 'hello world',
+      },
+    ],
+    edges: [],
+  },
+  group: {
+    // nodes: [
+    //   {
+    //     type: 'dynamic-group',
+    //     x: 400,
+    //     y: 200,
+    //     properties: {
+    //       children: ['rect_2'],
+    //     },
+    //     text: {
+    //       value: '默认分组',
+    //       x: 300,
+    //       y: 200,
+    //     },
+    //   },
+    //   {
+    //     id: 'rect_2',
+    //     type: 'circle',
+    //     x: 400,
+    //     y: 200,
+    //     text: '子节点',
+    //   },
+    //   {
+    //     type: 'custom-group',
+    //     x: 400,
+    //     y: 500,
+    //     text: {
+    //       value: '自定义分组',
+    //       x: 400,
+    //       y: 500,
+    //     },
+    //   },
+    // ],
+  },
+  anchor: {
+    nodes: [
+      {
+        id: 'node_id_1',
+        type: 'custom-sql-node',
+        x: 100,
+        y: 100,
+        properties: {
+          tableName: 'Users',
+          fields: [
+            {
+              key: 'id',
+              type: 'string',
+            },
+            {
+              key: 'name',
+              type: 'string',
+            },
+            {
+              key: 'age',
+              type: 'integer',
+            },
+          ],
+        },
+      },
+      {
+        id: 'node_id_2',
+        type: 'custom-sql-node',
+        x: 400,
+        y: 200,
+        properties: {
+          tableName: 'Settings',
+          fields: [
+            {
+              key: 'id',
+              type: 'string',
+            },
+            {
+              key: 'key',
+              type: 'integer',
+            },
+            {
+              key: 'value',
+              type: 'string',
+            },
+          ],
+        },
+      },
+    ],
+    edges: [],
+  },
+  htmlNode: {
+    nodes: [
+      {
+        id: '1',
+        type: 'custom-html-node',
+        x: 300,
+        y: 100,
+        properties: {
+          name: 'hello',
+          body: 'world',
+        },
+      },
+      {
+        id: '2',
+        type: 'custom-vue-html-node',
+        x: 300,
+        y: 280,
+        properties: {
+          name: 'VueComponent',
+        },
+      },
+      {
+        id: 'vue-node-1',
+        type: 'custom-vue-node',
+        x: 650,
+        y: 140,
+        properties: {
+          progress: 60,
+          width: 100,
+          height: 150,
+        },
+      },
+    ],
+    edges: [],
+  },
+  edgeAnimation: {
+    nodes: [
+      {
+        id: '1',
+        type: 'rect',
+        x: 300,
+        y: 100,
+        text: 'A',
+      },
+      {
+        id: '2',
+        type: 'rect',
+        x: 300,
+        y: 280,
+        text: 'B',
+      },
+    ],
+    edges: [],
+  },
+  snapline: {
+    nodes: [
+      {
+        id: '1',
+        type: 'rect',
+        x: 300,
+        y: 100,
+        text: 'A',
+      },
+      {
+        id: '2',
+        type: 'rect',
+        x: 300,
+        y: 280,
+        text: 'B',
+      },
+    ],
+    edges: [],
+  },
+  keyboard: {
+    nodes: [
+      {
+        id: '1',
+        type: 'rect',
+        x: 300,
+        y: 100,
+        text: '默认快捷键',
+      },
+      {
+        id: '2',
+        type: 'rect',
+        x: 300,
+        y: 280,
+        text: '自定义快捷键',
+      },
+    ],
+    edges: [],
+  },
+  highlight: {
+    name: 'leave',
+    displayName: '请假',
+    instanceUrl: 'leaveForm',
+    nodes: [
+      {
+        id: 'start',
+        type: 'circle',
+        x: 340,
+        y: 160,
+        properties: {
+          width: '120',
+          height: '80',
+        },
+        text: {
+          x: 340,
+          y: 200,
+          value: '开始',
+        },
+      },
+      {
+        id: 'd4dd93d9-f0ed-4730-be1e-1ab86b277a49',
+        type: 'rect',
+        x: 520,
+        y: 160,
+        properties: {
+          assignee: 'approve.operator',
+          taskType: 'Major',
+          performType: 'ANY',
+          autoExecute: 'N',
+          width: 120,
+          height: 80,
+          field: {
+            userKey: '1',
+          },
+        },
+        text: {
+          x: 520,
+          y: 160,
+          value: '请假申请',
+        },
+      },
+      {
+        id: 'approveDept',
+        type: 'rect',
+        x: 740,
+        y: 160,
+        properties: {
+          assignmentHandler: 'com.mldong.config.FlowAssignmentHandler',
+          taskType: 'Major',
+          performType: 'ANY',
+          autoExecute: 'N',
+          width: 120,
+          height: 80,
+          field: {},
+        },
+        text: {
+          x: 740,
+          y: 160,
+          value: '部门领导审批',
+        },
+      },
+      {
+        id: 'approveBoss',
+        type: 'rect',
+        x: 900,
+        y: 480,
+        properties: {
+          assignmentHandler: 'com.mldong.config.FlowAssignmentHandler',
+          taskType: 'Major',
+          performType: 'ANY',
+          autoExecute: 'N',
+          width: '120',
+          height: '80',
+        },
+        text: {
+          x: 900,
+          y: 480,
+          value: '公司领导审批',
+        },
+      },
+      {
+        id: '2c75eebf-5baf-4cd0-a7b3-05466be13634',
+        type: 'diamond',
+        x: 740,
+        y: 340,
+        properties: {
+          width: '120',
+          height: '80',
+        },
+      },
+      {
+        id: 'end',
+        type: 'circle',
+        x: 1080,
+        y: 160,
+        properties: {
+          width: '120',
+          height: '80',
+        },
+        text: {
+          x: 1080,
+          y: 200,
+          value: '结束',
+        },
+      },
+    ],
+    edges: [
+      {
+        id: '3037be41-5682-4344-b94a-9faf5c3e62ba',
+        type: 'polyline',
+        sourceNodeId: 'start',
+        targetNodeId: 'd4dd93d9-f0ed-4730-be1e-1ab86b277a49',
+        startPoint: {
+          x: 358,
+          y: 160,
+        },
+        endPoint: {
+          x: 460,
+          y: 160,
+        },
+        properties: {},
+        pointsList: [
+          {
+            x: 358,
+            y: 160,
+          },
+          {
+            x: 460,
+            y: 160,
+          },
+        ],
+      },
+      {
+        id: 'c79642ae-9f28-4213-8cdf-0e0d6467b1b9',
+        type: 'polyline',
+        sourceNodeId: 'd4dd93d9-f0ed-4730-be1e-1ab86b277a49',
+        targetNodeId: 'approveDept',
+        startPoint: {
+          x: 580,
+          y: 160,
+        },
+        endPoint: {
+          x: 680,
+          y: 160,
+        },
+        properties: {},
+        pointsList: [
+          {
+            x: 580,
+            y: 160,
+          },
+          {
+            x: 680,
+            y: 160,
+          },
+        ],
+      },
+      {
+        id: '09d9b143-9473-4a0f-8287-9abf6f65baf5',
+        type: 'polyline',
+        sourceNodeId: 'approveDept',
+        targetNodeId: '2c75eebf-5baf-4cd0-a7b3-05466be13634',
+        startPoint: {
+          x: 740,
+          y: 200,
+        },
+        endPoint: {
+          x: 740,
+          y: 315,
+        },
+        properties: {},
+        pointsList: [
+          {
+            x: 740,
+            y: 200,
+          },
+          {
+            x: 740,
+            y: 315,
+          },
+        ],
+      },
+      {
+        id: 'a64348ec-4168-4f36-8a61-15cf12c710b9',
+        type: 'polyline',
+        sourceNodeId: 'approveBoss',
+        targetNodeId: 'end',
+        startPoint: {
+          x: 960,
+          y: 480,
+        },
+        endPoint: {
+          x: 1080,
+          y: 142,
+        },
+        properties: {},
+        pointsList: [
+          {
+            x: 960,
+            y: 480,
+          },
+          {
+            x: 1140,
+            y: 480,
+          },
+          {
+            x: 1140,
+            y: 112,
+          },
+          {
+            x: 1080,
+            y: 112,
+          },
+          {
+            x: 1080,
+            y: 142,
+          },
+        ],
+      },
+      {
+        id: '517ef2c7-3486-4992-b554-0f538ab91751',
+        type: 'polyline',
+        sourceNodeId: '2c75eebf-5baf-4cd0-a7b3-05466be13634',
+        targetNodeId: 'end',
+        startPoint: {
+          x: 764,
+          y: 339,
+        },
+        endPoint: {
+          x: 1080,
+          y: 178,
+        },
+        properties: {
+          expr: '#f_day<3',
+        },
+        text: {
+          x: 922,
+          y: 339,
+          value: '请假天数小于3',
+        },
+        pointsList: [
+          {
+            x: 764,
+            y: 339,
+          },
+          {
+            x: 1080,
+            y: 339,
+          },
+          {
+            x: 1080,
+            y: 178,
+          },
+        ],
+      },
+      {
+        id: 'd7ec4166-f3fc-4fd6-a2ac-a6c4d509c4dd',
+        type: 'polyline',
+        sourceNodeId: '2c75eebf-5baf-4cd0-a7b3-05466be13634',
+        targetNodeId: 'approveBoss',
+        startPoint: {
+          x: 740,
+          y: 365,
+        },
+        endPoint: {
+          x: 840,
+          y: 480,
+        },
+        properties: {
+          expr: '#f_day>=3',
+        },
+        text: {
+          x: 740,
+          y: 422.5,
+          value: '请假天数大于等于3',
+        },
+        pointsList: [
+          {
+            x: 740,
+            y: 365,
+          },
+          {
+            x: 740,
+            y: 480,
+          },
+          {
+            x: 840,
+            y: 480,
+          },
+        ],
+      },
+    ],
+  },
+  customFields: {
+    nodes: [
+      {
+        id: 'node_id',
+        type: 'custom-field-rect',
+        x: 100,
+        y: 100,
+        text: '节点',
+        // 标准 properties
+        properties: {
+          name: '节点1',
+        },
+        customStatus: 1,
+        customData: {
+          name: 'Rose',
+          age: 13,
+        },
+      },
+    ],
+  },
+  plugins: {},
 }
